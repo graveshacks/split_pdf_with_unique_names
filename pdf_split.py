@@ -1,3 +1,4 @@
+
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 pdf_file_path = 'Back_packs_BCP_1372.pdf'   # enter name of the PDF file to be extracted from
@@ -8,7 +9,7 @@ pdf = PdfFileReader(pdf_file_path)
 totalpages = pdf.numPages
 print("Total number of pages in the pdf: ", totalpages)
 pgs = []
-with open("page_range.txt", "r") as f:  # enter the name of text file which contains list of Page Range and their respective Names separated by tab space("\t")
+with open("page_range.txt", "r") as f:
     lines = f.readlines()
 for line in lines:
     pg = line.split("\t")
@@ -18,8 +19,12 @@ for x in pgs:
         e = x[0]
         pg_range = e.split("-")
         for y in pg_range:
-            m = int(pg_range[0])
-            n = int(pg_range[1])
+            if len(pg_range)==2:
+                m = int(pg_range[0])
+                n = int(pg_range[1])
+            else:
+                m = int(pg_range[0])
+                n = m
             string = x[1]
             new_name = string.strip('\n')
             pages = []
