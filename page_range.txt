@@ -9,9 +9,9 @@
 91-100	UO Note
 101-108	Tender Notification
 109-122	Proceedings of the PQR Committee
-123-123	Udyog Aadhar Registration Certificate
+123	Udyog Aadhar Registration Certificate
 124-125	Government Purchase Enlistment Certificate(1)
-126-126	Store Details Certificate
+126	Store Details Certificate
 127-130	Chartered Engineers Inspection Report
 131-134	Government Purchase Enlistment Certificate(2)
 135-138	Submission of sample Bags
@@ -22,7 +22,7 @@
 193-261	Other
 263-281	Letters_Certificates(2)
 283-304	Income Tax Return Acknowledgement
-305-305	Letters_Certificates(3)
+305	Letters_Certificates(3)
 307-320	Statement of Account
 321-508	Letters_Certificates(4)
 509-516	Techno-commercial Evaluation Report
