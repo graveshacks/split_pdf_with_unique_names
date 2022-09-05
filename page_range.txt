@@ -18,11 +18,11 @@
 139-154	Technical Specification of Bag pack
 155-168	Value Added Tax Registration Certificate
 169-170	Tax Invoice
-171-192	Letters_Certificates(1)
+171-192	Letters/Certificates(1)
 193-261	Other
-263-281	Letters_Certificates(2)
+263-281	Letters/Certificates(2)
 283-304	Income Tax Return Acknowledgement
-305	Letters_Certificates(3)
+305	Letters/Certificates(3)
 307-320	Statement of Account
-321-508	Letters_Certificates(4)
+321-508	Letters/Certificates(4)
 509-516	Techno-commercial Evaluation Report
