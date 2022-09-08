@@ -2,18 +2,18 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 import re
 
 def pdf_split_mult(pdf_file_path, text_file):
-    file_base_name = pdf_file_path.replace(pdf_file_path, '')
-
+    pdf_file_path.replace(pdf_file_path, '')
     pdf = PdfFileReader(pdf_file_path)
-
     totalpages = pdf.numPages
     print("Total number of pages in the pdf: ", totalpages) # prints total number of pages in the source PDF
+    
     pgs = []
     with open(text_file, "r") as f:   # enter text file containing page range and names
         lines = f.readlines()
     for line in lines:
         pg = line.split("\t")  # splits page range and respective names into list
         pgs.append(pg)
+        
     for x in pgs:
         for l in x:
             e = x[0]
