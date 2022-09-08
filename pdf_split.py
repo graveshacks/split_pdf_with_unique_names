@@ -5,7 +5,7 @@ def pdf_split_mult(pdf_file_path, text_file):
     pdf_file_path.replace(pdf_file_path, '')
     pdf = PdfFileReader(pdf_file_path)
     totalpages = pdf.numPages
-    print("Total number of pages in the pdf: ", totalpages) # prints total number of pages in the source PDF
+    print("Total number of pages in the pdf: ", totalpages)  # prints total number of pages in the source PDF
     
     pgs = []
     with open(text_file, "r") as f:   # enter text file containing page range and names
@@ -13,6 +13,10 @@ def pdf_split_mult(pdf_file_path, text_file):
     for line in lines:
         pg = line.split("\t")  # splits page range and respective names into list
         pgs.append(pg)
+    df = []
+    for c in pgs:
+        tr = c[1].strip('\n')
+        df.append(tr)
         
     for x in pgs:
         for l in x:
@@ -36,9 +40,14 @@ def pdf_split_mult(pdf_file_path, text_file):
                 for page_num in pages:
                     pdfWriter.addPage(pdf.getPage(page_num))
 
-                with open(f'{new_name}.pdf', 'wb') as f:
-                    pdfWriter.write(f)
-                    f.close()
+                if df.count(name)==1:                   # checks if similar file names are present
+                    with open(f'{new_name}.pdf', 'wb') as f:
+                        pdfWriter.write(f)
+                        f.close()
+                else:
+                    with open(f'{new_name}({m}-{n}).pdf', 'wb') as f:  # adds starting and ending page numbers if names are repeated
+                        pdfWriter.write(f)
+                        f.close()
 
 if __name__ == '__main__':
     a = input("Enter source PDF file name/path: ")
