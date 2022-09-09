@@ -55,4 +55,5 @@ if __name__ == '__main__':
     try:
         pdf_split_mult(a,b)
     except:
-        print("ENTER VALID FILE NAME/PATH ADDRESS!")
+        print("->Enter valid File Name/Path Address")
+        print("->Make sure the Page Range and respective File Names in\n  text file are separated by single tab space")
