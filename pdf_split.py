@@ -50,8 +50,8 @@ def pdf_split_mult(pdf_file_path, text_file):
                         f.close()
 
 if __name__ == '__main__':
-    a = input("Enter source PDF file name/path: ")
-    b = input("Enter text file name/path: ")
+    a = input("Enter source PDF file name/path address: ")
+    b = input("Enter text file name/path address: ")
     try:
         pdf_split_mult(a,b)
     except:
