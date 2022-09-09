@@ -52,4 +52,7 @@ def pdf_split_mult(pdf_file_path, text_file):
 if __name__ == '__main__':
     a = input("Enter source PDF file name/path: ")
     b = input("Enter text file name/path: ")
-    pdf_split_mult(a,b)
+    try:
+        pdf_split_mult(a,b)
+    except:
+        print("ENTER VALID FILE NAME/PATH ADDRESS!")
