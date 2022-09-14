@@ -45,7 +45,7 @@ def pdf_split_mult(pdf_file_path, text_file):
                         pdfWriter.write(f)
                         f.close()
                 else:
-                    with open(f'{new_name}({m}-{n}).pdf', 'wb') as f:  # adds starting and ending page numbers if names are repeated
+                    with open(f'{new_name} ({m}-{n}).pdf', 'wb') as f:  # adds starting and ending page numbers if names are repeated
                         pdfWriter.write(f)
                         f.close()
 
